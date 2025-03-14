@@ -32,7 +32,6 @@ The "Pest Classification Using Deep Learning" project aims to develop an efficie
 
 ### Deployment Process:
 - Developed a Flask application with an API endpoint for real-time pest identification.
-- The application was optimized for mobile devices, allowing farmers to access pest identification functionality directly from smartphones or tablets in the field.
 
 ### Benefits:
 - Revolutionizes pest control practices in agriculture by providing a highly accurate and efficient tool for pest management.
