@@ -8,7 +8,7 @@ import json
 import torch
 
 # API key for OpenRouter
-api_key = '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'
+api_key = 'Your api key'
 
 # Page config and title
 st.set_page_config(page_title="Pest Classification & Information", layout="wide")
