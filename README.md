@@ -48,7 +48,7 @@ This project aims to develop an AI-powered pest identification system that class
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Premaramkarthik/Pest-Classification-Using-Convolutional-Neural-Network
+   git clone https://github.com/Premaramkarthik/Agricultural-Pest-Classification-Using-convolutional-neural-network-and-LLMs
    cd pest-identification-system
    ```
 2. Install dependencies:
