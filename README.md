@@ -1,42 +1,83 @@
-# Pest Classification Using Deep Learning
+# Agricultural Pest Classification Using convolutional neural network & LLMs
 
-## Project Overview:
+## Overview
+This project aims to develop an AI-powered pest identification system that classifies pest images into five categories and provides effective control recommendations. The system integrates deep learning models for classification and leverages Google's Gemini 2.0 via OpenRouter API for pest management insights.
 
-The "Pest Classification Using Deep Learning" project aims to develop an efficient and accurate system for identifying pests in agricultural settings using advanced convolutional neural networks (CNNs). Pest control is a critical aspect of agriculture, and leveraging deep learning techniques can significantly enhance pest detection and management processes.
+## Features
+- **Pest Classification:** Classifies pests into five categories: Caterpillar, Locusts, Slug, Gastropoda, and Curculionoidea.
+- **Deep Learning Models:** Implements MobileNetV2 (97.5%), YOLOv8 (77%), ResNet50, ResNet101V4, and EfficientNet.
+- **Data Augmentation:** Uses resizing, normalization, flipping, rotation, zooming, and contrast adjustments for better model generalization.
+- **Model Evaluation:** Trained multiple CNN architectures with hyperparameter tuning and early stopping.
+- **Deployment:** A Streamlit web application enables pest classification.
+- **LLM Integration:** Uses OpenRouter API with Gemini 2.0 to provide detailed pest insights and control strategies.
 
-## Training and Performance Monitoring:
+## Project Workflow
+### 1. Data Preprocessing & Preparation
+- Organized pest images into five categories with an 80-20 train-test split.
+- Applied preprocessing techniques like resizing, normalization, and augmentation.
 
-### Models Evaluated:
-- **ResNet50**
-- **ResNet-101v4**
-- **MobileNetv2**
-- **YOLOv8**
-- **EfficientNet**
+### 2. Model Development & Evaluation
+- Trained and evaluated various models:
+  - **ResNet50:** 80%
+  - **ResNet101V4:** 87.7%
+  - **MobileNetV2:** 97.5%
+  - **YOLOv8:** 77%
+  - **EfficientNet:** 89%
+- Used early stopping and hyperparameter tuning for optimization.
 
-### Training Approach:
-- Each model underwent rigorous training using labeled datasets containing images of pests.
-- For ResNet50, ResNet-101v4, MobileNetv2, and EfficientNet, early stopping was implemented to prevent overfitting.
-- YOLOv8 was continuously monitored for performance without early stopping, considering its potential for achieving good results with fewer training epochs.
+### 3. Model Selection & Optimization
+- Chose **YOLOv8** as the primary model due to its balance of accuracy and generalization.
+- Optimized the model for efficient classification.
 
-## Performance Metrics and Model Selection:
+### 4. Deployment with Streamlit
+- Developed an interactive **Streamlit** web application for real-time classification.
+- Integrated **OpenRouter API** with **Gemini 2.0 Flash Thinking Model** for pest insights and control strategies.
 
-### Evaluation Metrics:
-- **Confusion Matrices:** Provide detailed insights into the model's predictions, including metrics such as accuracy, precision, recall, specificity, and F1-score.
-- **Classification Reports:** Offer a concise summary of performance metrics for each individual pest class at each epoch, enabling comprehensive analysis and model selection.
+## Results
+- **MobileNetV2 (97.5%)** and **YOLOv8 (77%)** were selected as the best models.
+- The Streamlit app successfully classifies pests and provides actionable pest control strategies, including organic, chemical, and integrated pest management approaches.
 
-### Model Selection Criteria:
-- The chosen model prioritized a balance between accuracy and computational efficiency.
-- Performance metrics for each model and pest class were meticulously analyzed to identify the most suitable deep learning model.
+## Installation & Usage
+### Prerequisites
+- Python 3.8+
+- Streamlit
+- TensorFlow/Keras
+- OpenRouter API access
+- YOLOv8
 
-## Deployment with Flask:
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Premaramkarthik/Pest-Classification-Using-Convolutional-Neural-Network
+   cd pest-identification-system
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+4. Upload an image and get classification results along with pest control strategies.
 
-### Deployment Process:
-- Developed a Flask application with an API endpoint for real-time pest identification.
+## API Integration
+- The system uses OpenRouter API to connect with **Google's Gemini 2.0**, providing detailed insights about identified pests and their control methods.
+- Ensure you have an API key and add it to your environment variables.
 
-### Benefits:
-- Revolutionizes pest control practices in agriculture by providing a highly accurate and efficient tool for pest management.
-- Contributes to improved crop yields, reduced environmental impact, and a more sustainable agricultural future.
+## Future Enhancements
+- Improve YOLOv8 model accuracy.
+- Expand dataset to include more pest species.
+- Integrate real-time object detection.
+- Develop a mobile application for field use.
 
-## Conclusion:
+## Contributing
+Feel free to fork this repository, make improvements, and submit a pull request. Contributions are welcome!
 
-The "Pest Classification Using Deep Learning" project showcases the transformative potential of deep learning and technology in addressing critical challenges in agriculture and food security. By developing an efficient and accurate system for pest classification, the project empowers farmers with advanced tools for effective pest management, ultimately leading to a more sustainable agricultural ecosystem.
+
+## Contact
+For questions or collaborations, reach out via:
+- **Email:** premaramkarthik@gmail.com
+- **GitHub:** [Your GitHub Profile](https://github.com/Premaramkarthik)
+
+
